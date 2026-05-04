@@ -235,15 +235,21 @@ function buildPromptIdent(){
   const couleur=document.getElementById('i-couleur').value||'inconnue';
   const saison=document.getElementById('i-saison').value||'inconnue';
   const extra=document.getElementById('i-extra').value;
-  return `Tu es un expert paysagiste horticulteur français professionnel.
-Le client a cette plante : "${nom}"
-Caractéristiques : ensoleillement=${soleil}, sol=${eau}, hauteur=${hauteur}, couleur floraison=${couleur}, saison floraison=${saison}${extra?', contexte: '+extra:''}.
+ return `Tu es un expert paysagiste horticulteur français professionnel avec 30 ans d'expérience terrain en Belgique et France.
+Propose exactement 6 plantes DIFFÉRENTES correspondant précisément à ces critères :
+- Type : ${type}
+- Ensoleillement : ${soleil}
+- Humidité sol : ${eau}
+- pH sol : ${ph}
+- Hauteur : ${hauteur}
+- Couleur floraison : ${couleurs}
+- Saison floraison : ${saison}
+- Résistance gel : ${gel}
 
-1. Identifie précisément la plante (même si le nom est approximatif ou incomplet).
-2. Propose 5 plantes à associer avec elle, parfaitement compatibles.
+RÈGLE IMPORTANTE : Varie les familles botaniques proposées. Si Rudbeckia, Echinacea ou Lavande sont vraiment les plus pertinentes pour ces critères précis, propose-les. Mais explore aussi des genres moins courants qui correspondent aux mêmes conditions. Un professionnel a besoin de découvrir des options variées, pas toujours les mêmes classiques.
 
-Réponds UNIQUEMENT en JSON valide :
-{"plante_principale":{"nom":"Nom complet","latin":"Nom latin","type":"vivace|graminee|annuelle|bisannuelle|couvre-sol|arbuste","hauteur_cm":"XX–XX cm","soleil":"plein soleil|mi-ombre|ombre","eau":"sec|normal|humide|très humide","ph":"acide|neutre|alcalin|indifférent","couleur":["..."],"floraison_mois":[1,2,3],"floraison_label":"...","gel":"très rustique|rustique|mi-rustique|fragile","notes":"Conseil pratique pour paysagiste"},"associations":[{"nom":"Nom","latin":"Nom latin","type":"vivace|graminee|annuelle|bisannuelle|couvre-sol|arbuste","hauteur_cm":"XX–XX cm","soleil":"...","eau":"...","couleur":"description","floraison_label":"...","compat":"excellent|bon","raison":"Explication horticole précise et détaillée : pourquoi cette association fonctionne avec la plante principale, compatibilité hauteurs, conditions, complémentarité esthétique et temporelle"}]}
+Pour chaque plante, propose 3 associations. Réponds UNIQUEMENT en JSON valide :
+{"plantes":[{"nom":"Nom commun","latin":"Nom latin","type":"vivace|graminee|annuelle|bisannuelle|couvre-sol|arbuste","hauteur_cm":"XX–XX cm","soleil":"plein soleil|mi-ombre|ombre","eau":"sec|normal|humide|très humide","ph":"acide|neutre|alcalin|indifférent","couleur":["blanc","jaune","rose","rouge","violet","bleu","orange"],"floraison_mois":[1,2,3],"floraison_label":"Mois–Mois","gel":"très rustique|rustique|mi-rustique|fragile","notes":"Conseil pratique court pour paysagiste professionnel belge","associations":[{"nom":"Nom","latin":"Nom latin","hauteur_cm":"XX–XX cm","soleil":"...","eau":"...","couleur":"description","floraison_label":"...","compat":"excellent|bon","raison":"Explication horticole précise : pourquoi cette association fonctionne, compatibilité hauteurs et conditions, complémentarité esthétique et temporelle"}]}]}
 Réponds UNIQUEMENT avec le JSON, rien d'autre.`;
 }
 
