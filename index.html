@@ -100,7 +100,6 @@ select:focus,input:focus{border-color:var(--moss);}
   <div class="tab" onclick="showTab('identifier',this)">🌱 J'ai une plante</div>
 </div>
 
-<!-- ONGLET 1 -->
 <div id="panel-recherche" class="panel active">
 <div class="container">
   <div class="st">Type</div>
@@ -118,11 +117,11 @@ select:focus,input:focus{border-color:var(--moss);}
     <div><label class="fl">☀️ Ensoleillement</label>
       <select id="r-soleil"><option value="">Tous</option><option value="plein soleil">Plein soleil</option><option value="mi-ombre">Mi-ombre</option><option value="ombre">Ombre</option></select></div>
     <div><label class="fl">💧 Humidité sol</label>
-      <select id="r-eau"><option value="">Tous</option><option value="sec">Sec</option><option value="normal">Normal</option><option value="humide">Humide</option><option value="très humide">Très humide</option></select></div>
+      <select id="r-eau"><option value="">Tous</option><option value="sec">Sec</option><option value="normal">Normal</option><option value="humide">Humide</option><option value="tres humide">Très humide</option></select></div>
     <div><label class="fl">🧪 pH sol</label>
       <select id="r-ph"><option value="">Tous</option><option value="acide">Acide</option><option value="neutre">Neutre</option><option value="alcalin">Alcalin</option></select></div>
     <div><label class="fl">📏 Hauteur</label>
-      <select id="r-hauteur"><option value="">Toutes</option><option value="moins de 20 cm">Couvre-sol &lt;20cm</option><option value="20 à 60 cm">Basse 20–60cm</option><option value="60 à 150 cm">Moyenne 60–150cm</option><option value="150 à 300 cm">Haute 150–300cm</option><option value="3 à 6 mètres">Grande 3–6m</option></select></div>
+      <select id="r-hauteur"><option value="">Toutes</option><option value="moins de 20 cm">Couvre-sol &lt;20cm</option><option value="20 a 60 cm">Basse 20-60cm</option><option value="60 a 150 cm">Moyenne 60-150cm</option><option value="150 a 300 cm">Haute 150-300cm</option><option value="3 a 6 metres">Grande 3-6m</option></select></div>
     <div class="ff"><label class="fl">🎨 Couleur floraison</label>
       <div class="chips" id="chips-couleur">
         <div class="chip active" data-val="tous">Toutes</div>
@@ -135,16 +134,15 @@ select:focus,input:focus{border-color:var(--moss);}
         <div class="chip" data-val="orange">🟠 Orange</div>
       </div></div>
     <div class="ff"><label class="fl">🌸 Saison floraison</label>
-      <select id="r-saison"><option value="">Toutes</option><option value="hiver">Hiver (Déc–Mars)</option><option value="printemps">Printemps (Avr–Mai)</option><option value="été">Été (Juin–Août)</option><option value="automne">Automne (Sept–Nov)</option></select></div>
+      <select id="r-saison"><option value="">Toutes</option><option value="hiver">Hiver (Dec-Mars)</option><option value="printemps">Printemps (Avr-Mai)</option><option value="ete">Ete (Juin-Aout)</option><option value="automne">Automne (Sept-Nov)</option></select></div>
     <div class="ff"><label class="fl">❄️ Résistance gel</label>
-      <select id="r-gel"><option value="">Indifférent</option><option value="très rustique">Très rustique (&lt;-20°C)</option><option value="rustique">Rustique (-10 à -20°C)</option><option value="mi-rustique">Mi-rustique (0 à -10°C)</option><option value="fragile">Fragile</option></select></div>
+      <select id="r-gel"><option value="">Indifferent</option><option value="tres rustique">Très rustique</option><option value="rustique">Rustique</option><option value="mi-rustique">Mi-rustique</option><option value="fragile">Fragile</option></select></div>
   </div>
   <button class="btn" id="btn-r" onclick="rechercher()">🔍 Trouver mes plantes</button>
   <div id="r-results"></div>
   <button class="reset-btn" onclick="resetR()">↺ Réinitialiser</button>
 </div></div>
 
-<!-- ONGLET 2 -->
 <div id="panel-identifier" class="panel">
 <div class="container">
   <div class="ident-intro">
@@ -158,13 +156,13 @@ select:focus,input:focus{border-color:var(--moss);}
     <div><label class="fl">☀️ Son ensoleillement</label>
       <select id="i-soleil"><option value="">Inconnu</option><option value="plein soleil">Plein soleil</option><option value="mi-ombre">Mi-ombre</option><option value="ombre">Ombre</option></select></div>
     <div><label class="fl">💧 Son sol</label>
-      <select id="i-eau"><option value="">Inconnu</option><option value="sec">Sec</option><option value="normal">Normal</option><option value="humide">Humide</option><option value="très humide">Très humide</option></select></div>
+      <select id="i-eau"><option value="">Inconnu</option><option value="sec">Sec</option><option value="normal">Normal</option><option value="humide">Humide</option><option value="tres humide">Très humide</option></select></div>
     <div><label class="fl">📏 Sa hauteur</label>
-      <select id="i-hauteur"><option value="">Inconnue</option><option value="moins de 20 cm">Couvre-sol</option><option value="20 à 60 cm">Basse 20–60cm</option><option value="60 à 150 cm">Moyenne 60–150cm</option><option value="150 à 300 cm">Haute 150–300cm</option><option value="3 à 6 mètres">Grande 3–6m</option></select></div>
+      <select id="i-hauteur"><option value="">Inconnue</option><option value="moins de 20 cm">Couvre-sol</option><option value="20 a 60 cm">Basse 20-60cm</option><option value="60 a 150 cm">Moyenne 60-150cm</option><option value="150 a 300 cm">Haute 150-300cm</option><option value="3 a 6 metres">Grande 3-6m</option></select></div>
     <div><label class="fl">🎨 Couleur floraison</label>
       <select id="i-couleur"><option value="">Inconnue</option><option value="blanc">Blanc</option><option value="jaune">Jaune</option><option value="rose">Rose</option><option value="rouge">Rouge</option><option value="violet">Violet/bleu</option><option value="orange">Orange</option></select></div>
     <div><label class="fl">🌸 Saison floraison</label>
-      <select id="i-saison"><option value="">Inconnue</option><option value="hiver">Hiver</option><option value="printemps">Printemps</option><option value="été">Été</option><option value="automne">Automne</option></select></div>
+      <select id="i-saison"><option value="">Inconnue</option><option value="hiver">Hiver</option><option value="printemps">Printemps</option><option value="ete">Ete</option><option value="automne">Automne</option></select></div>
     <div class="ff"><label class="fl">💬 Contexte (optionnel)</label>
       <input type="text" id="i-extra" placeholder="Ex: talus sec, sous un arbre, bord de bassin..."></div>
   </div>
@@ -203,28 +201,15 @@ async function callAPI(prompt){
 }
 
 function buildPromptRecherche(){
-  const type=fType!=='tous'?fType:'tous types (vivace, graminée, annuelle, bisannuelle, couvre-sol, arbuste)';
-  const soleil=document.getElementById('r-soleil').value||'indifférent';
-  const eau=document.getElementById('r-eau').value||'indifférent';
-  const ph=document.getElementById('r-ph').value||'indifférent';
+  const soleil=document.getElementById('r-soleil').value||'indifferent';
+  const eau=document.getElementById('r-eau').value||'indifferent';
+  const ph=document.getElementById('r-ph').value||'indifferent';
   const hauteur=document.getElementById('r-hauteur').value||'toutes hauteurs';
   const couleurs=fCoul!=='tous'?(Array.isArray(fCoul)?fCoul.join(', '):fCoul):'toutes couleurs';
   const saison=document.getElementById('r-saison').value||'toutes saisons';
-  const gel=document.getElementById('r-gel').value||'indifférent';
-  return `Tu es un expert paysagiste horticulteur français professionnel.
-Propose exactement 6 plantes correspondant précisément à ces critères :
-- Type : ${type}
-- Ensoleillement : ${soleil}
-- Humidité sol : ${eau}
-- pH sol : ${ph}
-- Hauteur : ${hauteur}
-- Couleur floraison : ${couleurs}
-- Saison floraison : ${saison}
-- Résistance gel : ${gel}
-
-Pour chaque plante, propose 3 associations. Réponds UNIQUEMENT en JSON valide :
-{"plantes":[{"nom":"Nom commun","latin":"Nom latin","type":"vivace|graminee|annuelle|bisannuelle|couvre-sol|arbuste","hauteur_cm":"XX–XX cm","soleil":"plein soleil|mi-ombre|ombre","eau":"sec|normal|humide|très humide","ph":"acide|neutre|alcalin|indifférent","couleur":["blanc","jaune","rose","rouge","violet","bleu","orange"],"floraison_mois":[1,2,3],"floraison_label":"Mois–Mois","gel":"très rustique|rustique|mi-rustique|fragile","notes":"Conseil pratique court pour paysagiste professionnel","associations":[{"nom":"Nom","latin":"Nom latin","hauteur_cm":"XX–XX cm","soleil":"...","eau":"...","couleur":"description","floraison_label":"...","compat":"excellent|bon","raison":"Explication horticole précise : pourquoi cette association fonctionne, compatibilité hauteurs et conditions, complémentarité esthétique et temporelle"}]}]}
-Réponds UNIQUEMENT avec le JSON, rien d'autre.`;
+  const gel=document.getElementById('r-gel').value||'indifferent';
+  const typeLabel=fType!=='tous'?fType:'tous types (vivace, graminee, annuelle, bisannuelle, couvre-sol, arbuste)';
+  return 'Tu es un expert paysagiste horticulteur français professionnel avec 30 ans experience terrain en Belgique et France.\nPropose exactement 6 plantes VARIEES ET DIFFERENTES correspondant precisement a ces criteres :\n- Type : '+typeLabel+'\n- Ensoleillement : '+soleil+'\n- Humidite sol : '+eau+'\n- pH sol : '+ph+'\n- Hauteur : '+hauteur+'\n- Couleur floraison : '+couleurs+'\n- Saison floraison : '+saison+'\n- Resistance gel : '+gel+'\n\nREGLE IMPORTANTE : Varie absolument les familles botaniques. Si Rudbeckia, Echinacea ou Lavande sont vraiment les plus pertinentes, propose-les. Mais explore aussi des genres moins courants egalement adaptes. Un professionnel a besoin de decouvrir des options variees et pas toujours les memes classiques.\n\nPour chaque plante propose 3 associations. Reponds UNIQUEMENT en JSON valide :\n{"plantes":[{"nom":"Nom commun","latin":"Nom latin","type":"vivace|graminee|annuelle|bisannuelle|couvre-sol|arbuste","hauteur_cm":"XX-XX cm","soleil":"plein soleil|mi-ombre|ombre","eau":"sec|normal|humide|tres humide","ph":"acide|neutre|alcalin|indifferent","couleur":["blanc","jaune","rose","rouge","violet","bleu","orange"],"floraison_mois":[1,2,3],"floraison_label":"Mois-Mois","gel":"tres rustique|rustique|mi-rustique|fragile","notes":"Conseil pratique court pour paysagiste professionnel belge","associations":[{"nom":"Nom","latin":"Nom latin","hauteur_cm":"XX-XX cm","soleil":"...","eau":"...","couleur":"description","floraison_label":"...","compat":"excellent|bon","raison":"Explication horticole precise : pourquoi cette association fonctionne, compatibilite hauteurs et conditions, complementarite esthetique et temporelle"}]}]}\nReponds UNIQUEMENT avec le JSON rien dautre.';
 }
 
 function buildPromptIdent(){
@@ -235,36 +220,21 @@ function buildPromptIdent(){
   const couleur=document.getElementById('i-couleur').value||'inconnue';
   const saison=document.getElementById('i-saison').value||'inconnue';
   const extra=document.getElementById('i-extra').value;
- return `Tu es un expert paysagiste horticulteur français professionnel avec 30 ans d'expérience terrain en Belgique et France.
-Propose exactement 6 plantes DIFFÉRENTES correspondant précisément à ces critères :
-- Type : ${type}
-- Ensoleillement : ${soleil}
-- Humidité sol : ${eau}
-- pH sol : ${ph}
-- Hauteur : ${hauteur}
-- Couleur floraison : ${couleurs}
-- Saison floraison : ${saison}
-- Résistance gel : ${gel}
-
-RÈGLE IMPORTANTE : Varie les familles botaniques proposées. Si Rudbeckia, Echinacea ou Lavande sont vraiment les plus pertinentes pour ces critères précis, propose-les. Mais explore aussi des genres moins courants qui correspondent aux mêmes conditions. Un professionnel a besoin de découvrir des options variées, pas toujours les mêmes classiques.
-
-Pour chaque plante, propose 3 associations. Réponds UNIQUEMENT en JSON valide :
-{"plantes":[{"nom":"Nom commun","latin":"Nom latin","type":"vivace|graminee|annuelle|bisannuelle|couvre-sol|arbuste","hauteur_cm":"XX–XX cm","soleil":"plein soleil|mi-ombre|ombre","eau":"sec|normal|humide|très humide","ph":"acide|neutre|alcalin|indifférent","couleur":["blanc","jaune","rose","rouge","violet","bleu","orange"],"floraison_mois":[1,2,3],"floraison_label":"Mois–Mois","gel":"très rustique|rustique|mi-rustique|fragile","notes":"Conseil pratique court pour paysagiste professionnel belge","associations":[{"nom":"Nom","latin":"Nom latin","hauteur_cm":"XX–XX cm","soleil":"...","eau":"...","couleur":"description","floraison_label":"...","compat":"excellent|bon","raison":"Explication horticole précise : pourquoi cette association fonctionne, compatibilité hauteurs et conditions, complémentarité esthétique et temporelle"}]}]}
-Réponds UNIQUEMENT avec le JSON, rien d'autre.`;
+  return 'Tu es un expert paysagiste horticulteur français professionnel avec 30 ans experience terrain en Belgique et France.\nLe client a cette plante : "'+nom+'"\nCaracteristiques : ensoleillement='+soleil+', sol='+eau+', hauteur='+hauteur+', couleur floraison='+couleur+', saison floraison='+saison+(extra?', contexte: '+extra:'')+'\n\n1. Identifie precisement la plante meme si le nom est approximatif.\n2. Propose 5 plantes a associer avec elle parfaitement compatibles. Varie les familles botaniques et explore des options moins connues mais tout aussi pertinentes.\n\nReponds UNIQUEMENT en JSON valide :\n{"plante_principale":{"nom":"Nom complet","latin":"Nom latin","type":"vivace|graminee|annuelle|bisannuelle|couvre-sol|arbuste","hauteur_cm":"XX-XX cm","soleil":"plein soleil|mi-ombre|ombre","eau":"sec|normal|humide|tres humide","ph":"acide|neutre|alcalin|indifferent","couleur":["..."],"floraison_mois":[1,2,3],"floraison_label":"...","gel":"tres rustique|rustique|mi-rustique|fragile","notes":"Conseil pratique pour paysagiste"},"associations":[{"nom":"Nom","latin":"Nom latin","type":"vivace|graminee|annuelle|bisannuelle|couvre-sol|arbuste","hauteur_cm":"XX-XX cm","soleil":"...","eau":"...","couleur":"description","floraison_label":"...","compat":"excellent|bon","raison":"Explication horticole precise et detaillee : pourquoi cette association fonctionne avec la plante principale, compatibilite hauteurs conditions complementarite esthetique et temporelle"}]}\nReponds UNIQUEMENT avec le JSON rien dautre.';
 }
 
 async function rechercher(){
   const btn=document.getElementById('btn-r');
   const div=document.getElementById('r-results');
   btn.disabled=true;
-  div.innerHTML='<div class="loading"><div class="spinner"></div><p>L\'IA sélectionne les meilleures plantes...</p><p class="sub">Analyse des conditions · Sélection horticole · 10–15 secondes</p></div>';
+  div.innerHTML='<div class="loading"><div class="spinner"></div><p>L\'IA selectionne les meilleures plantes...</p><p class="sub">Analyse des conditions · Selection horticole · 10-15 secondes</p></div>';
   try{
     const data=await callAPI(buildPromptRecherche());
     const plantes=data.plantes||[];
-    if(!plantes.length){div.innerHTML='<div class="empty"><div class="em">🌱</div><p>Aucune plante trouvée.<br>Essayez d\'élargir les critères.</p></div>';return;}
-    div.innerHTML=`<div class="rh">${plantes.length} plante${plantes.length>1?'s':''} proposée${plantes.length>1?'s':''} par l'IA</div>`+plantes.map((p,i)=>cardHTML(p,'r',i)).join('');
+    if(!plantes.length){div.innerHTML='<div class="empty"><div class="em">🌱</div><p>Aucune plante trouvee.<br>Essayez d\'elargir les criteres.</p></div>';return;}
+    div.innerHTML='<div class="rh">'+plantes.length+' plante'+(plantes.length>1?'s':'')+' proposee'+(plantes.length>1?'s':'')+' par l\'IA</div>'+plantes.map((p,i)=>cardHTML(p,'r',i)).join('');
   }catch(e){
-    div.innerHTML='<div class="empty"><div class="em">⚠️</div><p>Erreur : '+e.message+'<br>Réessayez dans quelques secondes.</p></div>';
+    div.innerHTML='<div class="empty"><div class="em">⚠️</div><p>Erreur : '+e.message+'<br>Reessayez dans quelques secondes.</p></div>';
   }
   btn.disabled=false;
 }
@@ -275,12 +245,12 @@ async function identifier(){
   const btn=document.getElementById('btn-i');
   const div=document.getElementById('i-results');
   btn.disabled=true;
-  div.innerHTML='<div class="loading"><div class="spinner"></div><p>L\'IA identifie votre plante et cherche les associations...</p><p class="sub">Identification · Compatibilité horticole · 10–15 secondes</p></div>';
+  div.innerHTML='<div class="loading"><div class="spinner"></div><p>L\'IA identifie votre plante et cherche les associations...</p><p class="sub">Identification · Compatibilite horticole · 10-15 secondes</p></div>';
   try{
     const data=await callAPI(buildPromptIdent());
     afficherIdent(data,div);
   }catch(e){
-    div.innerHTML='<div class="empty"><div class="em">⚠️</div><p>Erreur : '+e.message+'<br>Réessayez dans quelques secondes.</p></div>';
+    div.innerHTML='<div class="empty"><div class="em">⚠️</div><p>Erreur : '+e.message+'<br>Reessayez dans quelques secondes.</p></div>';
   }
   btn.disabled=false;
 }
@@ -288,69 +258,39 @@ async function identifier(){
 function afficherIdent(data,div){
   const p=data.plante_principale;
   const assocs=data.associations||[];
-  div.innerHTML=`<div class="rh">✅ Plante identifiée + ${assocs.length} associations</div>`+
-    cardIdentHTML(p,assocs);
+  div.innerHTML='<div class="rh">✅ Plante identifiee + '+assocs.length+' associations</div>'+cardIdentHTML(p,assocs);
 }
 
 function cardHTML(p,pfx,i){
   const assocH=(p.associations||[]).map((a,ai)=>assocCard(a,pfx+i,ai)).join('');
-  return `<div class="plant-card" style="animation-delay:${i*0.06}s">
-    <div class="ch"><div><h3>${p.nom}</h3><div class="nlat">${p.latin}</div></div><span class="badge">${p.type||''}</span></div>
-    <div class="cb_">${specsH(p)}${florH(p)}<div class="nb">💡 ${p.notes}</div>
-    ${assocH?`<div class="at">🤝 Associations — toucher pour le détail</div><div class="acs">${assocH}</div>`:''}
-    <div class="pbs"><a class="pb pg" href="https://www.google.com/search?tbm=isch&q=${encodeURIComponent(p.latin+' jardin')}" target="_blank">📸 Photos</a><a class="pb pw" href="https://fr.wikipedia.org/wiki/Special:Search?search=${encodeURIComponent(p.latin)}" target="_blank">📖 Fiche</a></div>
-    </div></div>`;
+  return '<div class="plant-card" style="animation-delay:'+(i*0.06)+'s"><div class="ch"><div><h3>'+p.nom+'</h3><div class="nlat">'+p.latin+'</div></div><span class="badge">'+(p.type||'')+'</span></div><div class="cb_">'+specsH(p)+florH(p)+'<div class="nb">💡 '+p.notes+'</div>'+(assocH?'<div class="at">🤝 Associations — toucher pour le detail</div><div class="acs">'+assocH+'</div>':'')+'<div class="pbs"><a class="pb pg" href="https://www.google.com/search?tbm=isch&q='+encodeURIComponent(p.latin+' jardin')+'" target="_blank">📸 Photos</a><a class="pb pw" href="https://fr.wikipedia.org/wiki/Special:Search?search='+encodeURIComponent(p.latin)+'" target="_blank">📖 Fiche</a></div></div></div>';
 }
 
 function cardIdentHTML(p,assocs){
   const assocH=assocs.map((a,i)=>assocCard(a,'id',i)).join('');
-  return `<div class="plant-card">
-    <div class="ch"><div><h3>${p.nom}</h3><div class="nlat">${p.latin}</div></div><span class="badge">${p.type||''}</span></div>
-    <div class="cb_">${specsH(p)}${florH(p)}<div class="nb">💡 ${p.notes}</div>
-    ${assocH?`<div class="at">🤝 Associations recommandées — toucher pour le détail</div><div class="acs">${assocH}</div>`:''}
-    <div class="pbs"><a class="pb pg" href="https://www.google.com/search?tbm=isch&q=${encodeURIComponent(p.latin+' jardin')}" target="_blank">📸 Photos</a><a class="pb pw" href="https://fr.wikipedia.org/wiki/Special:Search?search=${encodeURIComponent(p.latin)}" target="_blank">📖 Fiche</a></div>
-    </div></div>`;
+  return '<div class="plant-card"><div class="ch"><div><h3>'+p.nom+'</h3><div class="nlat">'+p.latin+'</div></div><span class="badge">'+(p.type||'')+'</span></div><div class="cb_">'+specsH(p)+florH(p)+'<div class="nb">💡 '+p.notes+'</div>'+(assocH?'<div class="at">🤝 Associations recommandees — toucher pour le detail</div><div class="acs">'+assocH+'</div>':'')+'<div class="pbs"><a class="pb pg" href="https://www.google.com/search?tbm=isch&q='+encodeURIComponent(p.latin+' jardin')+'" target="_blank">📸 Photos</a><a class="pb pw" href="https://fr.wikipedia.org/wiki/Special:Search?search='+encodeURIComponent(p.latin)+'" target="_blank">📖 Fiche</a></div></div></div>';
 }
 
 function assocCard(a,pfx,i){
-  return `<div class="ac" id="ac-${pfx}-${i}" onclick="tAc('${pfx}',${i})">
-    <div class="ach"><div class="acl"><div class="acn">🌿 ${a.nom}</div><div class="acla">${a.latin||''} — ${a.hauteur_cm||''}</div></div>
-    <div class="acr"><span class="${a.compat==='excellent'?'ce':'cbo'}">${a.compat==='excellent'?'⭐ Excellent':'👍 Bon'}</span><span class="chev">▼</span></div></div>
-    <div class="ad">
-      <div class="asp">
-        <div class="aspec"><span>☀️</span><div><div class="asl">Soleil</div>${a.soleil||'–'}</div></div>
-        <div class="aspec"><span>💧</span><div><div class="asl">Sol</div>${a.eau||'–'}</div></div>
-        <div class="aspec"><span>📅</span><div><div class="asl">Floraison</div>${a.floraison_label||'–'}</div></div>
-        <div class="aspec"><span>📏</span><div><div class="asl">Hauteur</div>${a.hauteur_cm||'–'}</div></div>
-      </div>
-      <div class="rz">💡 ${a.raison}</div>
-      <div class="pbs"><a class="pb pg" href="https://www.google.com/search?tbm=isch&q=${encodeURIComponent((a.latin||a.nom)+' jardin')}" target="_blank">📸 Photos</a><a class="pb pw" href="https://fr.wikipedia.org/wiki/Special:Search?search=${encodeURIComponent(a.latin||a.nom)}" target="_blank">📖 Fiche</a></div>
-    </div></div>`;
+  return '<div class="ac" id="ac-'+pfx+'-'+i+'" onclick="tAc(\''+pfx+'\','+i+')"><div class="ach"><div class="acl"><div class="acn">🌿 '+a.nom+'</div><div class="acla">'+(a.latin||'')+' — '+(a.hauteur_cm||'')+'</div></div><div class="acr"><span class="'+(a.compat==='excellent'?'ce':'cbo')+'">'+(a.compat==='excellent'?'⭐ Excellent':'👍 Bon')+'</span><span class="chev">▼</span></div></div><div class="ad"><div class="asp"><div class="aspec"><span>☀️</span><div><div class="asl">Soleil</div>'+(a.soleil||'–')+'</div></div><div class="aspec"><span>💧</span><div><div class="asl">Sol</div>'+(a.eau||'–')+'</div></div><div class="aspec"><span>📅</span><div><div class="asl">Floraison</div>'+(a.floraison_label||'–')+'</div></div><div class="aspec"><span>📏</span><div><div class="asl">Hauteur</div>'+(a.hauteur_cm||'–')+'</div></div></div><div class="rz">💡 '+a.raison+'</div><div class="pbs"><a class="pb pg" href="https://www.google.com/search?tbm=isch&q='+encodeURIComponent((a.latin||a.nom)+' jardin')+'" target="_blank">📸 Photos</a><a class="pb pw" href="https://fr.wikipedia.org/wiki/Special:Search?search='+encodeURIComponent(a.latin||a.nom)+'" target="_blank">📖 Fiche</a></div></div></div>';
 }
 
 function specsH(p){
-  const dots=(p.couleur||[]).map(c=>`<span class="cdot" style="background:${CM[c]||'#ccc'}"></span>`).join(' ');
+  const dots=(p.couleur||[]).map(c=>'<span class="cdot" style="background:'+(CM[c]||'#ccc')+'"></span>').join(' ');
   const si={'plein soleil':'☀️','mi-ombre':'🌤️',ombre:'🌥️'};
-  const ei={sec:'🏜️',normal:'💧',humide:'🌊','très humide':'🌧️'};
-  const gi={'très rustique':'🥶',rustique:'❄️','mi-rustique':'🌡️',fragile:'🔥'};
-  return `<div class="sg">
-    <div class="sp"><span>${si[p.soleil]||'☀️'}</span><div><div class="sl">Soleil</div>${p.soleil||'–'}</div></div>
-    <div class="sp"><span>${ei[p.eau]||'💧'}</span><div><div class="sl">Humidité</div>${p.eau||'–'}</div></div>
-    <div class="sp"><span>🧪</span><div><div class="sl">pH</div>${p.ph||'–'}</div></div>
-    <div class="sp"><span>📏</span><div><div class="sl">Hauteur</div>${p.hauteur_cm||'–'}</div></div>
-    ${(p.couleur&&p.couleur.length)?`<div class="sp"><span>🎨</span><div><div class="sl">Couleur</div><div style="display:flex;gap:3px;margin-top:2px">${dots}</div></div></div>`:''}
-    ${p.gel?`<div class="sp"><span>${gi[p.gel]||'❄️'}</span><div><div class="sl">Gel</div>${p.gel}</div></div>`:''}
-  </div>`;
+  const ei={sec:'🏜️',normal:'💧',humide:'🌊','tres humide':'🌧️'};
+  const gi={'tres rustique':'🥶',rustique:'❄️','mi-rustique':'🌡️',fragile:'🔥'};
+  return '<div class="sg"><div class="sp"><span>'+(si[p.soleil]||'☀️')+'</span><div><div class="sl">Soleil</div>'+(p.soleil||'–')+'</div></div><div class="sp"><span>'+(ei[p.eau]||'💧')+'</span><div><div class="sl">Humidite</div>'+(p.eau||'–')+'</div></div><div class="sp"><span>🧪</span><div><div class="sl">pH</div>'+(p.ph||'–')+'</div></div><div class="sp"><span>📏</span><div><div class="sl">Hauteur</div>'+(p.hauteur_cm||'–')+'</div></div>'+((p.couleur&&p.couleur.length)?'<div class="sp"><span>🎨</span><div><div class="sl">Couleur</div><div style="display:flex;gap:3px;margin-top:2px">'+dots+'</div></div></div>':'')+(p.gel?'<div class="sp"><span>'+(gi[p.gel]||'❄️')+'</span><div><div class="sl">Gel</div>'+p.gel+'</div></div>':'')+'</div>';
 }
 
 function florH(p){
   if(!p.floraison_mois||!p.floraison_mois.length)return '';
-  const b=ML.map((_,i)=>`<div class="mo${p.floraison_mois.includes(i+1)?' on':''}"></div>`).join('');
-  const l=ML.map(m=>`<span>${m}</span>`).join('');
-  return `<div class="mw"><div class="sl" style="margin-bottom:4px">🌸 Calendrier floraison</div><div class="mr">${b}</div><div class="ml">${l}</div></div>`;
+  const b=ML.map((_,i)=>'<div class="mo'+(p.floraison_mois.includes(i+1)?' on':'')+'"></div>').join('');
+  const l=ML.map(m=>'<span>'+m+'</span>').join('');
+  return '<div class="mw"><div class="sl" style="margin-bottom:4px">🌸 Calendrier floraison</div><div class="mr">'+b+'</div><div class="ml">'+l+'</div></div>';
 }
 
-function tAc(pfx,i){document.getElementById(`ac-${pfx}-${i}`).classList.toggle('open');}
+function tAc(pfx,i){document.getElementById('ac-'+pfx+'-'+i).classList.toggle('open');}
 
 function resetR(){
   ['r-soleil','r-eau','r-ph','r-hauteur','r-saison','r-gel'].forEach(id=>document.getElementById(id).value='');
